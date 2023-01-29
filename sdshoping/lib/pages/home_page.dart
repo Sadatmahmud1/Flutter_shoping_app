@@ -7,7 +7,7 @@ final String name = "Sadat's";
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: Text("atalogue App")),
+        title: Center(child: Text("catalogue App")),
       ),
         body: Center(
           child: Container(
