@@ -12,16 +12,20 @@ class _LoginPageState extends State<LoginPage> {
   final _fromkey = GlobalKey<FormState>();
 
   moveToHome(BuildContext context) async {
-    if(_fromkey.currentState!.validate())
-    setState(() {
-      changedButton = false;
-    });
+    if(_fromkey.currentState!.validate()){
+     
+     setState(() 
+     {
+      changedButton = true;
+    }
+    );
     await Future.delayed(const Duration(seconds: 1));
     await Navigator.pushNamed(context, MyRoute.homeRoute);
 
     setState(() {
       changedButton = false;
     });
+  }
   }
 
   @override
