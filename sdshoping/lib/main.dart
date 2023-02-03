@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:sdshoping/pages/home_page.dart';
+import 'package:sdshoping/pages/widgets/home_page.dart';
 import 'package:sdshoping/pages/login_page.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:sdshoping/pages/myroutes.dart';
+import 'package:sdshoping/pages/utils/myroutes.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,8 +18,8 @@ class MyApp extends StatelessWidget {
         fontFamily: GoogleFonts.lato().fontFamily,
       ),
       darkTheme: ThemeData(brightness: Brightness.dark),
-      debugShowCheckedModeBanner: true, //for hiding the debuging banner
-      initialRoute: "/",
+      debugShowCheckedModeBanner: false, //for hiding the debuging banner
+      initialRoute: MyRoute.loginRoute,
       routes: {
         "/": (context) => LoginPage(),
         MyRoute.homeRoute: (context) => HomePage(),
