@@ -8,12 +8,10 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: Text("Catalogue App",
-        style: TextStyle(
-          fontWeight: FontWeight.bold
+    
+        title: Center(child: Text("Catalogue App",))
+        
         ),
-        )),
-      ),
       body: Center(
         child: Container(
             child: Text('welcome to $name flutter app $days day course')),

@@ -8,11 +8,14 @@ class Mydrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     final imageUrl = "https://img.freepik.com/free-photo/male-beauty-concept-portrait-fashionable-young-man-with-stylish-haircut-wearing-trendy-suit-posing-black-studio-background_155003-21656.jpg?w=2000&t=st=1675397959~exp=1675398559~hmac=9c67d18615fa35e995ce1150a30acf7612be2c5c803cbf61dff625be8ea23849";
     return Drawer(
+      
       child: Container(
-        color: Color.fromARGB(255, 0, 0, 0),
+        color: Color.fromARGB(255, 255, 255, 255),
         child: ListView(
           children: [
+            
             DrawerHeader(
+    
               padding: EdgeInsets.zero,
               // margin: EdgeInsets.zero,
               child:  UserAccountsDrawerHeader(
@@ -34,35 +37,35 @@ class Mydrawer extends StatelessWidget {
               )),
               ListTile(
                 leading: Icon(CupertinoIcons.home,
-                color: Colors.white,
+                color: Colors.black,
                 ),
                 title: Text("Home",
                 textScaleFactor: 1.2
                 ,
                 
-                style: TextStyle(color: Colors.white)
+                style: TextStyle(color: Colors.black)
                 ),
               ),
               ListTile(
                 leading: Icon(CupertinoIcons.profile_circled,
-                color: Colors.white,
+                color: Colors.black,
                 ),
                 title: Text("Profile",
                 textScaleFactor: 1.2
                 ,
                 
-                style: TextStyle(color: Colors.white)
+                style: TextStyle(color: Colors.black)
                 ),
               ),
               ListTile(
                 leading: Icon(CupertinoIcons.mail,
-                color: Colors.white,
+                color: Colors.black,
                 ),
                 title: Text("Email me",
                 textScaleFactor: 1.2
                 ,
                 
-                style: TextStyle(color: Colors.white)
+                style: TextStyle(color: Colors.black)
                 ),
               )
           ],
