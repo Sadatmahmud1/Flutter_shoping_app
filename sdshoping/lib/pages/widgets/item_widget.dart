@@ -13,7 +13,7 @@ class ItemWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     
     return Card(
-      color: Color.fromARGB(255, 255, 254, 221),
+      color: Colors.white,
       child: ListTile(
         onTap: () {
           print("${item.name} prassed");
