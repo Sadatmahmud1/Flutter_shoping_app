@@ -25,7 +25,7 @@ class MyTheme {
           fontSize: 24),
           elevation: 0.0,
         ),
-        primarySwatch: Colors.deepOrange,
+        primarySwatch: Colors.grey,
         fontFamily: GoogleFonts.lato().fontFamily,
       );
 }
