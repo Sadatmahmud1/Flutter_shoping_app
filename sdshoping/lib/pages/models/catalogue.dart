@@ -1,6 +1,6 @@
  
 class CatalogModel {
- static  List<Item> items =items;
+ static  List<Item> items = List.empty();
 }
 
 class Item{
@@ -19,6 +19,7 @@ class Item{
       required this.color,
       required this.image});
       factory Item.fromMap(Map<String, dynamic>map){
+  
   return Item(
     id: map["id"],
   name: map["name"],
