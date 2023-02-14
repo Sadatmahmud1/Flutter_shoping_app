@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sdshoping/pages/utils/myroutes.dart';
+import 'package:sdshoping/pages/widgets/themes.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -49,7 +50,7 @@ class _LoginPageState extends State<LoginPage> {
                 style: TextStyle(
                     fontSize: 30,
                     fontWeight: FontWeight.bold,
-                    color: Color.fromRGBO(247, 49, 0, 1)),
+                    color: MyTheme.darkBluishColor),
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(
@@ -100,7 +101,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       Material(
                         elevation: 7,
-                        color: Colors.deepOrange,
+                        color: MyTheme.darkBluishColor,
                         borderRadius:
                             BorderRadius.circular(changedButton ? 50 : 10),
                         child: InkWell(
