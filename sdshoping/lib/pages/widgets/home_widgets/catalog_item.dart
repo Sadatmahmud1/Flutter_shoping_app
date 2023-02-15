@@ -42,7 +42,7 @@ class CatalogItem extends StatelessWidget {
                   const StadiumBorder()
                   ),
                 ),
-                child: "Bye".text.make())
+                child: "Buy".text.bold.make())
              ],
             ).pOnly(right: 8.0)
           ],
