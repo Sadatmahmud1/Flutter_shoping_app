@@ -1,10 +1,6 @@
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
-
 import 'package:flutter/material.dart';
 import 'package:sdshoping/pages/widgets/themes.dart';
 import 'package:velocity_x/velocity_x.dart';
-
 import 'models/catalogue.dart';
 
 // ignore: camel_case_types
@@ -15,6 +11,8 @@ class homeDetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      
+      appBar: AppBar(backgroundColor: Colors.transparent),
       backgroundColor: MyTheme.cream,
       bottomNavigationBar: ButtonBar(
               alignment: MainAxisAlignment.spaceBetween,
@@ -57,6 +55,11 @@ class homeDetailPage extends StatelessWidget {
                         .make(),
                     catalog.desc.text.xl2.textStyle(context.captionStyle).make(),
                     15.heightBox,
+                    "Dolore accusam ea diam invidunt vero sed takimata et rebum sit. Tempor takimata et elitr et duo, diam sed et sadipscing ea sit rebum magna rebum sea. Dolor duo vero et duo. Est lorem ut sadipscing ut takimata. Ut ipsum diam accusam sed diam accusam invidunt rebum. Sanctus eos accusam."
+                    .text
+                    .textStyle(context.captionStyle)
+                    .make()
+                    .p16()
                   ]).py64(),
                 ),
               ),

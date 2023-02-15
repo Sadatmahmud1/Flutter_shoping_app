@@ -1,12 +1,13 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'dart:convert';
 import 'package:sdshoping/pages/models/catalogue.dart';
+import 'package:sdshoping/pages/utils/myroutes.dart';
 import 'package:sdshoping/pages/widgets/themes.dart';
 import 'package:velocity_x/velocity_x.dart';
+import '../home_widgets/catalog_list.dart';
 import 'home_widgets/catalog_header.dart';
-import 'home_widgets/catalog_image.dart';
-import 'home_widgets/catalog_list.dart';
 
 // ignore: use_key_in_widget_constructors
 class HomePage extends StatefulWidget {
@@ -50,6 +51,13 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
+      floatingActionButton: FloatingActionButton(onPressed: (){
+        Navigator.pushNamed(context, MyRoute.cartRoute);
+      } ,
+      backgroundColor: MyTheme.darkBluishColor,
+
+      child: Icon(CupertinoIcons.cart)
+      ),
       backgroundColor: MyTheme.cream,
       body: SafeArea(
           child: Container(

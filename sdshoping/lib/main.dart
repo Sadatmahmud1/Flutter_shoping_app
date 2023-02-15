@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sdshoping/pages/cart_page.dart';
 import 'package:sdshoping/pages/widgets/home_page.dart';
 import 'package:sdshoping/pages/login_page.dart';
 import 'package:sdshoping/pages/utils/myroutes.dart';
@@ -19,10 +20,12 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false, //for hiding the debuging banner
       initialRoute: MyRoute.homeRoute,
       routes: {
-        "/": (context) => const LoginPage(),
+        "/": (context) =>  LoginPage(),
         MyRoute.homeRoute: (context) => HomePage(),
-        MyRoute.loginRoute: (context) => const LoginPage(),
+        MyRoute.loginRoute: (context) =>  LoginPage(),
+        MyRoute.cartRoute: (context) =>  CartPage(),
       },
     );
   }
+  
 }
