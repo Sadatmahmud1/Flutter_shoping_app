@@ -3,6 +3,8 @@ import 'package:sdshoping/pages/utils/myroutes.dart';
 import 'package:sdshoping/pages/widgets/themes.dart';
 
 class LoginPage extends StatefulWidget {
+  const LoginPage({super.key});
+
   @override
   State<LoginPage> createState() => _LoginPageState();
 }
@@ -21,6 +23,7 @@ class _LoginPageState extends State<LoginPage> {
     }
     );
     await Future.delayed(const Duration(seconds: 1));
+    // ignore: use_build_context_synchronously
     await Navigator.pushNamed(context, MyRoute.homeRoute);
 
     setState(() {
@@ -39,10 +42,10 @@ class _LoginPageState extends State<LoginPage> {
           child: Column(
             children: [
               Image.asset(
-                "assets/images/login_page1.png",
-                fit: BoxFit.cover,
+                "assets/images/security2.jpg",
+                fit: BoxFit.contain,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Text(
@@ -63,7 +66,7 @@ class _LoginPageState extends State<LoginPage> {
                     children: [
                       
                             TextFormField(
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                           hintText: "Enter Username",
                           labelText: "username",
                         ),
@@ -80,7 +83,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       TextFormField(
                         obscureText: true,
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                           hintText: "Enter password",
                           labelText: "password",
                         ),
@@ -93,10 +96,10 @@ class _LoginPageState extends State<LoginPage> {
                           return null;
                         },
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 40.0,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 40,
                       ),
                       Material(
@@ -108,16 +111,16 @@ class _LoginPageState extends State<LoginPage> {
                           
                           onTap: () => moveToHome(context),
                           child: AnimatedContainer(
-                            duration: Duration(seconds: 1),
+                            duration: const Duration(seconds: 1),
                             width: changedButton ? 50 : 150,
                             height: changedButton ? 50 : 40,
                             alignment: Alignment.center,
                             child: changedButton
-                                ? Icon(
+                                ? const Icon(
                                     Icons.done,
                                     color: Colors.white,
                                   )
-                                : Text(
+                                : const Text(
                                     "Login",
                                     style: TextStyle(
                                       color: Colors.white,

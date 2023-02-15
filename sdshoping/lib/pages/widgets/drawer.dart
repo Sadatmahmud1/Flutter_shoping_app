@@ -6,15 +6,16 @@ class Mydrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final imageUrl = "https://scontent.fdac138-1.fna.fbcdn.net/v/t39.30808-6/329037305_1192720864686930_8886675273932171257_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeFmP2aWZAEFqCgfXHIF0rXO_EnZfVLfJrr8Sdl9Ut8muj63bZAKnG2x3Dy_6JwJd2mFrWFTbLuAG08bnVPpc62S&_nc_ohc=Bf1GShv2gokAX8Xsp2m&_nc_ht=scontent.fdac138-1.fna&oh=00_AfCzVCwI9sLwoh5kbDzPt7Zb4oieP17AEpFhswtDIGX_iw&oe=63EFD0BB";
+    const imageUrl = "https://scontent.fdac138-1.fna.fbcdn.net/v/t39.30808-6/329037305_1192720864686930_8886675273932171257_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeFmP2aWZAEFqCgfXHIF0rXO_EnZfVLfJrr8Sdl9Ut8muj63bZAKnG2x3Dy_6JwJd2mFrWFTbLuAG08bnVPpc62S&_nc_ohc=Bf1GShv2gokAX8Xsp2m&_nc_ht=scontent.fdac138-1.fna&oh=00_AfCzVCwI9sLwoh5kbDzPt7Zb4oieP17AEpFhswtDIGX_iw&oe=63EFD0BB";
     return Drawer(
       
       child: Container(
-        color: Color.fromARGB(255, 255, 255, 255),
+        color: const Color.fromARGB(255, 255, 255, 255),
         child: ListView(
+          // ignore: prefer_const_literals_to_create_immutables
           children: [
             
-            DrawerHeader(
+            const DrawerHeader(
     
               padding: EdgeInsets.zero,
               // margin: EdgeInsets.zero,
@@ -35,7 +36,7 @@ class Mydrawer extends StatelessWidget {
                   backgroundImage: NetworkImage(imageUrl),
                 ),
               )),
-              ListTile(
+              const ListTile(
                 leading: Icon(CupertinoIcons.home,
                 color: Colors.black,
                 ),
@@ -46,7 +47,7 @@ class Mydrawer extends StatelessWidget {
                 style: TextStyle(color: Colors.black)
                 ),
               ),
-              ListTile(
+              const ListTile(
                 leading: Icon(CupertinoIcons.profile_circled,
                 color: Colors.black,
                 ),
@@ -57,7 +58,7 @@ class Mydrawer extends StatelessWidget {
                 style: TextStyle(color: Colors.black)
                 ),
               ),
-              ListTile(
+              const ListTile(
                 leading: Icon(CupertinoIcons.mail,
                 color: Colors.black,
                 ),

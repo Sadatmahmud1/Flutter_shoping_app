@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:sdshoping/pages/widgets/home_page.dart';
 import 'package:sdshoping/pages/login_page.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:sdshoping/pages/utils/myroutes.dart';
 import 'package:sdshoping/pages/widgets/themes.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -18,9 +19,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false, //for hiding the debuging banner
       initialRoute: MyRoute.homeRoute,
       routes: {
-        "/": (context) => LoginPage(),
+        "/": (context) => const LoginPage(),
         MyRoute.homeRoute: (context) => HomePage(),
-        MyRoute.loginRoute: (context) => LoginPage(),
+        MyRoute.loginRoute: (context) => const LoginPage(),
       },
     );
   }

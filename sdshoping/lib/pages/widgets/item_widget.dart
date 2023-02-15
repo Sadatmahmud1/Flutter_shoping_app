@@ -1,13 +1,12 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:sdshoping/pages/models/catalogue.dart';
-import 'package:sdshoping/pages/widgets/item_widget.dart';
 
 class ItemWidget extends StatelessWidget {
   final Item item;
 
   const ItemWidget({Key? key, required this.item})
-      : assert(item != null),
-        super(key: key);
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,13 +15,16 @@ class ItemWidget extends StatelessWidget {
       color: Colors.white,
       child: ListTile(
         onTap: () {
-          print("${item.name} prassed");
+          if (kDebugMode) {
+            print("${item.name} prassed");
+          }
         },
         leading: Image.network(item.image),
         title: Text(item.name),
         subtitle: Text(item.desc),
         trailing: Text("\$${item.price}",
         textScaleFactor: 1.5,
+        // ignore: prefer_const_constructors
         style: TextStyle(
           color: Colors.deepOrange,
           fontWeight: FontWeight.bold
