@@ -57,6 +57,7 @@ class homeDetailPage extends StatelessWidget {
                     15.heightBox,
                     "Dolore accusam ea diam invidunt vero sed takimata et rebum sit. Tempor takimata et elitr et duo, diam sed et sadipscing ea sit rebum magna rebum sea. Dolor duo vero et duo. Est lorem ut sadipscing ut takimata. Ut ipsum diam accusam sed diam accusam invidunt rebum. Sanctus eos accusam."
                     .text
+                    .color(MyTheme.darkBluishColor)
                     .textStyle(context.captionStyle)
                     .make()
                     .p16()
