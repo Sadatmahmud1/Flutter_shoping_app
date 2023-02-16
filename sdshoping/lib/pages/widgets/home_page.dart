@@ -4,7 +4,6 @@ import 'package:flutter/services.dart';
 import 'dart:convert';
 import 'package:sdshoping/pages/models/catalogue.dart';
 import 'package:sdshoping/pages/utils/myroutes.dart';
-import 'package:sdshoping/pages/widgets/themes.dart';
 import 'package:velocity_x/velocity_x.dart';
 import '../home_widgets/catalog_list.dart';
 import 'home_widgets/catalog_header.dart';
@@ -50,15 +49,16 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(backgroundColor: context.primaryColor,),
+      
+      //Floting cart
       floatingActionButton: FloatingActionButton(onPressed: (){
         Navigator.pushNamed(context, MyRoute.cartRoute);
       } ,
-      backgroundColor: MyTheme.darkBluishColor,
-
-      child: Icon(CupertinoIcons.cart)
+      backgroundColor: context.canvasColor,
+      child: Icon(CupertinoIcons.cart,color: context.cardColor,)
       ),
-      backgroundColor: MyTheme.cream,
+      backgroundColor: context.primaryColor,
       body: SafeArea(
           child: Container(
         padding: Vx.mH32,

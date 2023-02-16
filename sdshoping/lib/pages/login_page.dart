@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sdshoping/pages/utils/myroutes.dart';
 import 'package:sdshoping/pages/widgets/themes.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -37,7 +38,7 @@ class _LoginPageState extends State<LoginPage> {
     return Material(
       
       
-        color: Colors.white,
+        color: context.cardColor,
         child: SingleChildScrollView(
           child: Column(
             children: [
@@ -53,7 +54,7 @@ class _LoginPageState extends State<LoginPage> {
                 style: TextStyle(
                     fontSize: 30,
                     fontWeight: FontWeight.bold,
-                    color: MyTheme.darkBluishColor),
+                    color: context.canvasColor),
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(
@@ -67,8 +68,11 @@ class _LoginPageState extends State<LoginPage> {
                       
                             TextFormField(
                         decoration: const InputDecoration(
+                        
                           hintText: "Enter Username",
                           labelText: "username",
+                          labelStyle: TextStyle(color: Color.fromARGB(255, 4, 144, 186)),
+                          
                         ),
                         validator: (value) {
                           if (value!.isEmpty) {
@@ -80,12 +84,14 @@ class _LoginPageState extends State<LoginPage> {
                           name = value;
                           setState(() {});
                         },
+                        style: TextStyle(color: Color.fromARGB(255, 0, 229, 255)),
                       ),
                       TextFormField(
                         obscureText: true,
                         decoration: const InputDecoration(
                           hintText: "Enter password",
                           labelText: "password",
+                          labelStyle: TextStyle(color: Color.fromARGB(255, 0, 153, 173)),
                         ),
                         validator: (value) {
                           if (value!.isEmpty) {
@@ -104,7 +110,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       Material(
                         elevation: 7,
-                        color: MyTheme.darkBluishColor,
+                        color: context.primaryColor,
                         borderRadius:
                             BorderRadius.circular(changedButton ? 50 : 10),
                         child: InkWell(

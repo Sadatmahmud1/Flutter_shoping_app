@@ -4,6 +4,7 @@ import 'package:sdshoping/pages/widgets/home_page.dart';
 import 'package:sdshoping/pages/login_page.dart';
 import 'package:sdshoping/pages/utils/myroutes.dart';
 import 'package:sdshoping/pages/widgets/themes.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      themeMode: ThemeMode.dark,
+      themeMode: ThemeMode.system,
       theme: MyTheme.lightTheme(context),
       darkTheme: MyTheme.darkTheme(context),
       debugShowCheckedModeBanner: false, //for hiding the debuging banner

@@ -13,17 +13,24 @@ class MyTheme {
           fontSize: 24),
           elevation: 0.0,
         ),
-        primarySwatch: Colors.blueGrey,
+        primaryColor: cream,
+        cardColor: Colors.white,
+        canvasColor: darkBluishColor,
         fontFamily: GoogleFonts.poppins().fontFamily,
+      
       );
 
 
  static ThemeData  darkTheme(BuildContext context) => ThemeData(
-        brightness: Brightness.dark
+        // brightness: Brightness.dark,
+       primaryColor: Color.fromARGB(255, 23, 23, 23),
+       cardColor: darkBluishColor,
+       canvasColor: Colors.white,
+       iconTheme: const IconThemeData(color: Color.fromARGB(255, 255, 255, 255)),
       );
 
       //Color 
       static Color cream = const Color.fromARGB(255, 222, 224, 227);
-      static Color darkBluishColor = Color.fromARGB(255, 7, 30, 99);
+      static Color darkBluishColor = Color.fromARGB(255, 2, 2, 47);
 
 }

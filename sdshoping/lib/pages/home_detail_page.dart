@@ -13,12 +13,12 @@ class homeDetailPage extends StatelessWidget {
     return Scaffold(
       
       appBar: AppBar(backgroundColor: Colors.transparent),
-      backgroundColor: MyTheme.cream,
+      backgroundColor: context.primaryColor,
       bottomNavigationBar: ButtonBar(
               alignment: MainAxisAlignment.spaceBetween,
               buttonPadding: EdgeInsets.zero,
              children: [
-               "৳${catalog.price}".text.bold.xl4.color(Colors.black).make(),
+               "৳${catalog.price}".text.bold.xl4.color(context.canvasColor).make(),
                
                ElevatedButton(onPressed: (){},
                
@@ -46,22 +46,23 @@ class homeDetailPage extends StatelessWidget {
                 arcType: VxArcType.CONVEY,
                 edge: VxEdge.TOP,
                 child: Container(
-                  color:Colors.white,
+                  color:context.primaryColor,
                   width: context.screenWidth,
                   child: Column(children: [
                     catalog.name.text.xl4
-                        .color(MyTheme.darkBluishColor)
+                        .color(context.canvasColor)
                         .bold
                         .make(),
-                    catalog.desc.text.xl2.textStyle(context.captionStyle).make(),
+                    catalog.desc.text.color(context.canvasColor).xl2.textStyle(context.captionStyle).make(),
                     15.heightBox,
                     "Dolore accusam ea diam invidunt vero sed takimata et rebum sit. Tempor takimata et elitr et duo, diam sed et sadipscing ea sit rebum magna rebum sea. Dolor duo vero et duo. Est lorem ut sadipscing ut takimata. Ut ipsum diam accusam sed diam accusam invidunt rebum. Sanctus eos accusam."
                     .text
-                    .color(MyTheme.darkBluishColor)
+                    .color(context.canvasColor)
                     .textStyle(context.captionStyle)
                     .make()
                     .p16()
-                  ]).py64(),
+
+                  ]).py64().color(context.cardColor),
                 ),
               ),
             ),
