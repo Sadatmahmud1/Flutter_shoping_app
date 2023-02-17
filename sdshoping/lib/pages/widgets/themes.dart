@@ -23,7 +23,7 @@ class MyTheme {
 
  static ThemeData  darkTheme(BuildContext context) => ThemeData(
         // brightness: Brightness.dark,
-       primaryColor: Color.fromARGB(255, 23, 23, 23),
+       primaryColor: const Color.fromARGB(255, 23, 23, 23),
        cardColor: darkBluishColor,
        canvasColor: Colors.white,
        iconTheme: const IconThemeData(color: Color.fromARGB(255, 255, 255, 255)),
@@ -31,6 +31,6 @@ class MyTheme {
 
       //Color 
       static Color cream = const Color.fromARGB(255, 222, 224, 227);
-      static Color darkBluishColor = Color.fromARGB(255, 2, 2, 47);
+      static Color darkBluishColor = const Color.fromARGB(255, 2, 2, 47);
 
 }

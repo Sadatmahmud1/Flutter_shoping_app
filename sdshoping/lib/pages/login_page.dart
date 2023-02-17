@@ -101,6 +101,7 @@ class _LoginPageState extends State<LoginPage> {
                           }
                           return null;
                         },
+                        style: const TextStyle(color: Color.fromARGB(255, 0, 229, 255)),
                       ),
                       const SizedBox(
                         height: 40.0,
