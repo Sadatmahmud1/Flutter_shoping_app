@@ -84,7 +84,7 @@ class _LoginPageState extends State<LoginPage> {
                           name = value;
                           setState(() {});
                         },
-                        style: TextStyle(color: Color.fromARGB(255, 0, 229, 255)),
+                        style: const TextStyle(color: Color.fromARGB(255, 0, 229, 255)),
                       ),
                       TextFormField(
                         obscureText: true,
@@ -111,7 +111,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       Material(
                         elevation: 7,
-                        color: context.primaryColor,
+                        color: context.canvasColor,
                         borderRadius:
                             BorderRadius.circular(changedButton ? 50 : 10),
                         child: InkWell(
@@ -130,7 +130,7 @@ class _LoginPageState extends State<LoginPage> {
                                 : const Text(
                                     "Login",
                                     style: TextStyle(
-                                      color: Colors.white,
+                                      color: Color.fromARGB(255, 0, 225, 255),
                                       fontSize: 24,
                                       fontWeight: FontWeight.bold,
                                     ),

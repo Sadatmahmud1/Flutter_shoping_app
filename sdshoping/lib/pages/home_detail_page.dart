@@ -21,10 +21,7 @@ class homeDetailPage extends StatelessWidget {
                "৳${catalog.price}".text.bold.xl4.color(context.canvasColor).make(),
                
                ElevatedButton(onPressed: (){},
-               
                style: ButtonStyle(
-                foregroundColor: MaterialStateProperty.all(Colors.white),
-               backgroundColor: MaterialStateProperty.all(MyTheme.darkBluishColor),
                 shape: MaterialStateProperty.all(
                   const StadiumBorder()
                   ),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:sdshoping/pages/models/cart.dart';
 import 'package:sdshoping/pages/widgets/themes.dart';
 import 'package:velocity_x/velocity_x.dart';
-
 
 class CartPage extends StatelessWidget {
   const CartPage({super.key});
@@ -14,7 +14,6 @@ class CartPage extends StatelessWidget {
         backgroundColor: Colors.transparent,
         title: Center(child: "Cart".text.color(context.canvasColor).make()),
       ),
-
       body: Column(
         children: [
           _CartList().p32().expand(),
@@ -27,22 +26,28 @@ class CartPage extends StatelessWidget {
 }
 
 class _CartTotal extends StatelessWidget {
+  
   const _CartTotal({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final _cart = CartModel();
     return SizedBox(
       height: 200,
       child: Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          "\$999".text.xl4.bold.color(context.theme.canvasColor).make(),
+          "\$${_cart.totalPrice}".text.xl4.bold.color(context.theme.canvasColor).make(),
           30.widthBox,
-          ElevatedButton(onPressed: () {}, 
-          style:ButtonStyle(
-            backgroundColor: MaterialStateProperty.all(context.theme.canvasColor),
-          ) ,
-          child: "Buy".text.bold.color(context.cardColor).make(),
+          ElevatedButton(
+            onPressed: () {
+                    ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(
+                content: "BUYING IS NOT SUPPORTATED".text.make()
+              ));
+            },
+            
+            child: "Buy".text.bold.make(),
           ).w32(context)
         ],
       ),
@@ -58,18 +63,19 @@ class _CartList extends StatefulWidget {
 }
 
 class __CartListState extends State<_CartList> {
+  final _cart = CartModel();
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      itemCount: 5,
+      itemCount:_cart.items?.length,
       itemBuilder: (context, index) => ListTile(
+       
         leading: const Icon(Icons.done),
         trailing: IconButton(
-          
           icon: const Icon(Icons.remove_circle_outline),
-          onPressed: (){},
-          ),
-          title: "Item 1".text.bold.color(context.canvasColor).make(),
+          onPressed: () {},
+        ),
+        title: _cart.items[index].name.text.make(),
       ),
     );
   }

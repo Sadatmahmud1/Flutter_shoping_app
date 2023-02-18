@@ -32,22 +32,44 @@ class CatalogItem extends StatelessWidget {
              children: [
                "৳${catalog.price}".text.color(context.canvasColor).bold.xl.make(),
                
-               ElevatedButton(onPressed: (){},
-               
-               style: ButtonStyle(
-               backgroundColor: MaterialStateProperty.all(
-                context.canvasColor),
-                shape: MaterialStateProperty.all(
-                  const StadiumBorder()
-                  ),
-                ),
-                child: "Buy".text.color(context.primaryColor).bold.make())
+               _AddtoCart()
              ],
             ).pOnly(right: 8.0)
           ],
         ))
       ],
     )).color(context.cardColor).rounded.square(140).make().py16();
+  }
+}
+
+class _AddtoCart extends StatefulWidget {
+  const _AddtoCart({
+    super.key,
+  });
+
+  @override
+  State<_AddtoCart> createState() => _AddtoCartState();
+}
+
+class _AddtoCartState extends State<_AddtoCart> {
+   bool isAdded = false;
+  @override
+  Widget build(BuildContext context) {
+   
+    return ElevatedButton(
+     onPressed: (){
+      isAdded = isAdded.toggle();
+      setState(() { });
+     },
+    
+     style: ButtonStyle(
+          
+     shape: MaterialStateProperty.all(
+       const StadiumBorder()
+       ),
+     ),
+     child: isAdded ? Icon(Icons.done): "Add to cart".text.bold.make()
+     );
   }
 }
 
