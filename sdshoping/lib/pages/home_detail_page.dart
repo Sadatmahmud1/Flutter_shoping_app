@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sdshoping/pages/widgets/home_widgets/add_to_cart.dart';
 import 'package:sdshoping/pages/widgets/themes.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'models/catalogue.dart';
@@ -20,15 +21,11 @@ class homeDetailPage extends StatelessWidget {
              children: [
                "৳${catalog.price}".text.bold.xl4.color(context.canvasColor).make(),
                
-               ElevatedButton(onPressed: (){},
-               style: ButtonStyle(
-                shape: MaterialStateProperty.all(
-                  const StadiumBorder()
-                  ),
-                ),
-                child: "Buy".text.xl2.bold.make()).w24(context)
+               AddtoCart(catalog: catalog).wh(120, 50)
              ],
             ).p20(),
+      
+      
       body: SafeArea(
         bottom: false,
         child: Column(
