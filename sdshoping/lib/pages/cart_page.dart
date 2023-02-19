@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:sdshoping/pages/models/cart.dart';
-import 'package:sdshoping/pages/widgets/themes.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class CartPage extends StatelessWidget {
@@ -37,7 +36,7 @@ class _CartTotal extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          "\$${_cart.totalPrice}".text.xl4.bold.color(context.theme.canvasColor).make(),
+          "৳${_cart.totalPrice}".text.xl4.bold.color(context.theme.canvasColor).make(),
           30.widthBox,
           ElevatedButton(
             onPressed: () {
@@ -75,8 +74,8 @@ class __CartListState extends State<_CartList> {
           icon: const Icon(Icons.remove_circle_outline),
           onPressed: () {},
         ),
-        title: _cart.items[index].name.text.make(),
+        title: Text(_cart.items[index].name),
       ),
-    );
+    ); 
   }
 }

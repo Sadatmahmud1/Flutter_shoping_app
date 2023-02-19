@@ -1,19 +1,23 @@
-
-
 import 'package:sdshoping/pages/models/catalogue.dart';
 
 class CartModel {
+  // ignore: non_constant_identifier_names
+  static final cartModel = CartModel._internal();
+
+  CartModel._internal();
+
+  factory CartModel() => cartModel;
+  
   // catalog field
   late CatalogModel _catalog;
 
   // Collection of IDs - store Ids of each item
   final List<int> _itemIds = [];
-
+//  static List<Item> items;
   // Get Catalog
   CatalogModel get catalog => _catalog;
 
   set catalog(CatalogModel newCatalog) {
-    assert(newCatalog != null);
     _catalog = newCatalog;
   }
 
@@ -27,7 +31,7 @@ class CartModel {
   // Add Item
 
   void add(Item item) {
-  _itemIds.add(items as int);
+  _itemIds.add(item.id);
 }
 
   // Remove Item

@@ -1,5 +1,12 @@
  
 class CatalogModel {
+  static final catModel = CatalogModel._internal();
+
+  CatalogModel._internal();
+
+  factory CatalogModel() => catModel;
+
+
  static  List<Item> items = List.empty();
  getById(int id) =>
   items.firstWhere((element) => element.id == id, orElse: null);
@@ -8,7 +15,7 @@ class CatalogModel {
 }
 
 class Item{
-  final num id;
+  final int id;
   final String name;
   final String desc;
   final num    price;
