@@ -18,16 +18,16 @@ class MyTheme {
         canvasColor: darkBluishColor,
         fontFamily: GoogleFonts.poppins().fontFamily,
       
-        floatingActionButtonTheme: FloatingActionButtonThemeData(
-        backgroundColor: const Color.fromARGB(255, 12, 0, 105),
-        foregroundColor: const Color.fromARGB(255, 255, 255, 255),
+        floatingActionButtonTheme: const FloatingActionButtonThemeData(
+        backgroundColor: Color.fromARGB(255, 12, 0, 105),
+        foregroundColor: Color.fromARGB(255, 255, 255, 255),
         
        ),
       
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-         backgroundColor: Color.fromARGB(255, 10, 0, 69), // set the background color
-         foregroundColor: Color.fromARGB(255, 255, 255, 255), 
+         backgroundColor: const Color.fromARGB(255, 10, 0, 69), // set the background color
+         foregroundColor: const Color.fromARGB(255, 255, 255, 255), 
         )
       ),
       
@@ -36,7 +36,7 @@ class MyTheme {
 
  static ThemeData  darkTheme(BuildContext context) => ThemeData(
         // brightness: Brightness.dark,
-       primaryColor: Color.fromARGB(255, 5, 1, 23),
+       primaryColor: const Color.fromARGB(255, 5, 1, 23),
        cardColor: darkBluishColor,
        canvasColor: Colors.white,
        iconTheme: const IconThemeData(color: Color.fromARGB(255, 255, 255, 255)),
@@ -45,23 +45,23 @@ class MyTheme {
         textColor: context.cardColor,
         ),
        floatingActionButtonTheme: FloatingActionButtonThemeData(
-        backgroundColor: Color.fromARGB(255, 0, 157, 255),
+        backgroundColor: const Color.fromARGB(255, 0, 157, 255),
         foregroundColor: context.canvasColor,
         
        ),
        elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-         backgroundColor: Color.fromARGB(255, 83, 75, 153), // set the background color
-         foregroundColor: Color.fromARGB(255, 255, 255, 255), 
+         backgroundColor: const Color.fromARGB(255, 83, 75, 153), // set the background color
+         foregroundColor: const Color.fromARGB(255, 255, 255, 255), 
         )
       ),
-     textTheme: TextTheme(
-          titleLarge: const TextStyle(fontSize: 36.0, fontWeight: FontWeight.bold,color: Colors.amber),
+     textTheme: const TextTheme(
+          titleLarge: TextStyle(fontSize: 36.0, fontWeight: FontWeight.bold,color: Colors.amber),
         ), 
       );
 
       //Color 
       static Color cream = const Color.fromARGB(255, 222, 224, 227);
-      static Color darkBluishColor = Color.fromARGB(255, 1, 1, 91);
+      static Color darkBluishColor = const Color.fromARGB(255, 1, 1, 91);
 
 }

@@ -16,8 +16,8 @@ class CartPage extends StatelessWidget {
       body: Column(
         children: [
           _CartList().p32().expand(),
-          Divider(),
-          _CartTotal(),
+          const Divider(),
+          const _CartTotal(),
         ],
       ),
     );
@@ -26,17 +26,16 @@ class CartPage extends StatelessWidget {
 
 class _CartTotal extends StatelessWidget {
   
-  const _CartTotal({super.key});
+  const _CartTotal();
 
   @override
   Widget build(BuildContext context) {
-    final _cart = CartModel();
     return SizedBox(
       height: 200,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          "৳${_cart.totalPrice}".text.xl4.bold.color(context.theme.canvasColor).make(),
+          "৳${CartModel().totalPrice}".text.xl4.bold.color(context.theme.canvasColor).make(),
           30.widthBox,
           ElevatedButton(
             onPressed: () {
@@ -54,14 +53,7 @@ class _CartTotal extends StatelessWidget {
   }
 }
 
-class _CartList extends StatefulWidget {
-  const _CartList({super.key});
-
-  @override
-  State<_CartList> createState() => __CartListState();
-}
-
-class __CartListState extends State<_CartList> {
+class _CartList extends StatelessWidget{
   final _cart = CartModel();
   @override
   Widget build(BuildContext context) {
@@ -69,7 +61,7 @@ class __CartListState extends State<_CartList> {
       return "Nothing to show".text.xl4.color(context.canvasColor).makeCentered();
     } else {
       return ListView.builder(
-      itemCount:_cart.items?.length,
+      itemCount:_cart.items.length,
       itemBuilder: (context, index) => ListTile(
        
         leading: const Icon(Icons.done),
@@ -77,7 +69,7 @@ class __CartListState extends State<_CartList> {
           icon: const Icon(Icons.remove_circle_outline),
           onPressed: () {
             _cart.remove(_cart.items[index]);
-            setState(() {});
+            // setState(() {});
           },
         ),
         title: Text(_cart.items[index].name),

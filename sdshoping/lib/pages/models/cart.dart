@@ -1,28 +1,15 @@
 import 'package:sdshoping/pages/models/catalogue.dart';
 
 class CartModel {
-  // ignore: non_constant_identifier_names
-  static final cartModel = CartModel._internal();
 
-  CartModel._internal();
-
-  factory CartModel() => cartModel;
-  
   // catalog field
-  late CatalogModel _catalog;
+  late CatalogModel catalog;
 
   // Collection of IDs - store Ids of each item
-  final List<int> _itemIds = [];
-//  static List<Item> items;
-  // Get Catalog
-  CatalogModel get catalog => _catalog;
-
-  set catalog(CatalogModel newCatalog) {
-    _catalog = newCatalog;
-  }
+  List<int> get _itemIds => [];
 
   // Get items in the cart
-  List get items => _itemIds.map((id) => _catalog.getById(id)).toList();
+  List get items => _itemIds.map((id) => catalog.getById(id)).toList();
 
   // Get total price
   num get totalPrice =>
@@ -30,9 +17,10 @@ class CartModel {
 
   // Add Item
 
+   // Add items to cart
   void add(Item item) {
-  _itemIds.add(item.id);
-}
+    items.add(item);
+  }
 
   // Remove Item
 
